@@ -306,7 +306,7 @@
       if (!valid) return;
 
       // Stop before sending if the webhook has not been configured.
-      if (WEBHOOK_URL.includes("PASTE_YOUR")) {
+      if (WEBHOOK_URL.includes("https://nishbhar.app.n8n.cloud/webhook/cv-enquiry")) {
         alert("https://nishbhar.app.n8n.cloud/webhook-test/cv-enquiry");
         return;
       }
@@ -334,7 +334,7 @@
       try {
         // Send the enquiry to the n8n webhook.
         const response = await fetch(WEBHOOK_URL, {
-          method: "https://nishbhar.app.n8n.cloud/webhook/cv-enquiry",
+          method: "Post",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data)
         });
