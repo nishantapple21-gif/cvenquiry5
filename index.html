@@ -334,7 +334,7 @@
       try {
         // Send the enquiry to the n8n webhook.
         const response = await fetch(WEBHOOK_URL, {
-          method: "POST",
+          method: "https://nishbhar.app.n8n.cloud/webhook/cv-enquiry",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data)
         });
